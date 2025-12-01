@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | TERP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+            --dark: #34495e;
+            --red: #e74c3c;
+            --orange: #e67e22;
+            --purple: #9b59b6;
+            --green: #27ae60;
+            --yellow: #f1c40f;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--red), var(--orange), var(--purple), var(--green), var(--yellow));
+            border-radius: 2px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .initiative-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .initiative-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .card-header {
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+        }
+        
+        .card-header.red::before { background-color: var(--red); }
+        .card-header.orange::before { background-color: var(--orange); }
+        .card-header.purple::before { background-color: var(--purple); }
+        .card-header.green::before { background-color: var(--green); }
+        .card-header.yellow::before { background-color: var(--yellow); }
+        
+        .card-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .card-subtitle {
+            font-size: 1rem;
+            color: var(--secondary);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .card-body {
+            padding: 0 1.5rem 1.5rem;
+        }
+        
+        .card-section { margin-bottom: 1.5rem; }
+        
+        .section-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i { margin-right: 0.5rem; color: var(--secondary); }
+        .section-content { padding-left: 1.5rem; }
+        .highlights { list-style: none; }
+        
+        .highlights li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .highlights li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Our Projects</h1>
+            <p class="subtitle">A snapshot of TERP’s sustainability, community, and circular economy work.</p>
+        </header>
+        
+        <!-- Grid -->
+        <div class="initiatives-grid">
+
+            <!-- Koottam -->
+            <div class="initiative-card">
+                <div class="card-header red">
+                    <h2 class="card-title">Koottam Sustainability Assessment</h2>
+                    <p class="card-subtitle">Sustainability Audit</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-section">
+                        <div class="section-title"><i class="fas fa-info-circle"></i> Summary</div>
+                        <div class="section-content">
+                            TERP audited waste, energy and transport impacts of Koottam Festival using ESRS-aligned indicators, producing a low-carbon action plan for future editions.
+                        </div>
+                    </div>
+
+                    <div class="card-section">
+                        <div class="section-title"><i class="fas fa-star"></i> Highlights</div>
+                        <ul class="highlights">
+                            <li>3-day observation, 6,000+ attendees</li>
+                            <li>Identified DG inefficiencies</li>
+                            <li>Actionable sustainability roadmap</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Roots and Routes -->
+            <div class="initiative-card">
+                <div class="card-header orange">
+                    <h2 class="card-title">Roots & Routes</h2>
+                    <p class="card-subtitle">Experiential Tourism Mapping</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-section">
+                        <div class="section-title"><i class="fas fa-info-circle"></i> Summary</div>
+                        <div class="section-content">
+                            A digital travel tool promoting local, cultural, and women-led enterprises through curated travel routes rooted in community experiences.
+                        </div>
+                    </div>
+
+                    <div class="card-section">
+                        <div class="section-title"><i class="fas fa-star"></i> Highlights</div>
+                        <ul class="highlights">
+                            <li>Mobile-first, map-based tool</li>
+                            <li>Low-impact, community-linked travel</li>
+                            <li>Supports tribal and women-led SMEs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CKCL -->
+            <div class="initiative-card">
+                <div class="card-header yellow">
+                    <h2 class="card-title">Clean Kerala Company Assessment</h2>
+                    <p class="card-subtitle">Waste Systems & Circular Economy</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-section">
+                        <div class="section-title"><i class="fas fa-info-circle"></i> Summary</div>
+                        <div class="section-content">
+                            TERP analysed waste processing performance, SL/ML plastic flows, and decentralised recovery possibilities for Kerala’s state waste company.
+                        </div>
+                    </div>
+
+                    <div class="card-section">
+                        <div class="section-title"><i class="fas fa-star"></i> Key Insights</div>
+                        <ul class="highlights">
+                            <li>Mapped SL vs ML plastics pathways</li>
+                            <li>Identified recovery leakages</li>
+                            <li>Proposed decentralised micro-MRFs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Open Mic -->
+            <div class="initiative-card">
+                <div class="card-header purple">
+                    <h2 class="card-title">Open Mic Night</h2>
+                    <p class="card-subtitle">Completed Event • “Our Only Home”</p>
+                </div>
+                <div class="card-body">
+                    <div class="section-title"><i class="fas fa-info-circle"></i> Summary</div>
+                    <div class="section-content">
+                        A climate-themed open mic event blending poetry, music, and storytelling. Held in partnership with Playfolio in Trivandrum.
+                    </div>
+
+                    <div class="card-section">
+                        <div class="section-title"><i class="fas fa-star"></i> Highlights</div>
+                        <ul class="highlights">
+                            <li>40+ performers & attendees</li>
+                            <li>Themes of climate grief & belonging</li>
+                            <li>Interest for recurring series</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unmute -->
+            <div class="initiative-card">
+                <div class="card-header green">
+                    <h2 class="card-title">Unmute</h2>
+                    <p class="card-subtitle">Youth Dialogue Series</p>
+                </div>
+                <div class="card-body">
+                    <div class="section-title"><i class="fas fa-info-circle"></i> Summary</div>
+                    <div class="section-content">
+                        A youth-led dialogue series discussing sustainable living, mental health, climate choices, and lifestyle decisions.
+                    </div>
+
+                    <div class="card-section">
+                        <div class="section-title"><i class="fas fa-star"></i> Highlights</div>
+                        <ul class="highlights">
+                            <li>Student-led moderation</li>
+                            <li>Panel + open floor formats</li>
+                            <li>Strong academic participation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chayakkodu -->
+            <div class="initiative-card">
+                <div class="card-header orange">
+                    <h2 class="card-title">Chayakkodu</h2>
+                    <p class="card-subtitle">Tribal Arts & Education Residency</p>
+                </div>
+                <div class="card-body">
+                    <div class="section-title"><i class="fas fa-info-circle"></i> Summary</div>
+                    <div class="section-content">
+                        An art and environmental education project at a tribal LP school in Kannur resulting in a collaborative student mural.
+                    </div>
+
+                    <div class="card-section">
+                        <div class="section-title"><i class="fas fa-star"></i> Highlights</div>
+                        <ul class="highlights">
+                            <li>Collaborated with tribal educators</li>
+                            <li>Forest & identity-based learning</li>
+                            <li>Completed community mural</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>© 2025 TERP — The Earth Reimagined Project</p>
+        </footer>
+
+    </div>
+</body>
+</html>
